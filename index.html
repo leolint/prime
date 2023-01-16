@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Prime Cub</title>
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div class="header_wrapper">
+            <div class="logo">
+                <img src="/img/logo.png" alt="">
+            </div>
+            <nav class="header_wrapper-nav">
+                <button onclick="openAdressMenu()" class="header_wrapper-nav--link">Адреса</button>
+                <button onclick="openKitchenMenu()" class="header_wrapper-nav--link">Меню</button>
+                <button onclick="openHookasMenu()" class="header_wrapper-nav--link">Кальяни</button>
+                <button onclick="openBarMenu()" class="header_wrapper-nav--link">Бар</button>
+            </nav>
+            <div class="header_wrapper-insta">
+                <a target="_blank" href="https://www.instagram.com/prime_club_khm/">
+                    <img src="/img/instagram.png" alt="">
+                </a>
+                <div>
+                    <h5 class="time">12:00<span> - </span>00:00</h5>
+                </div>
+                <div>
+                    <a class="tel" href="tel:+380988800908">+380988800908</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="main">
+        <div class="main_img_wrapper">
+            <img src="img/zUL.gif" alt="">
+        </div>
+        <button onclick="openMobileMenu()" class="burgerButton">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="container">
+            <div class="main_wrapper">
+                <h1 class="main_wrapper-title">
+                    Prime Club <br> <span>доставка кальянiв бар піца коктейлі Хмельницький</span>
+                </h1>
+                <h4 class="main_wrapper-subtitle">Твій особливий простір для відпочинку</h4>
+            </div>
+            <div class="main_subtitles">
+                <div class="wrapper">
+                    <h3 class="entertainment">Lounge</h3>
+                        <h3 class="entertainment">Бар</h3>
+                            <h3 class="entertainment">Кальяни</h3>
+                                <h3 class="entertainment">Кухня</h3>
+                </div>
+                <div class="wrapper">
+                    <h3 class="entertainment">Компьютери</h3>
+                        <h3 class="entertainment">Консоли</h3>
+                            <h3 class="entertainment">Настiльнi Iгри</h3>
+                                <h3 class="entertainment">Cinema Room</h3>
+                </div>
+            </div>
+        </div>
+        <div class="bar" id="bar" onclick="closeBarMenu()">
+            <div class="bar_wrapper">
+                <img src="/img/bar.png" alt="">
+            </div>
+        </div>
+        <div class="kitchen" id="kitchen">
+            <img onclick="closeKitchenMenu()" id="menuOne" src="/img/menuTwo.jpg" alt="">
+            <div>
+                <button onclick="changeFirstImgMenuMobile()">Перша Сторiнка</button>
+                <button onclick="changeSecondImgMenuMobile()">Друга Сторiнка</button>
+            </div>
+
+        </div>
+        <div class="adress" id="adress" onclick="closeAdressMenu()">
+            <div class="adress_wrapper">
+                <img src="/img/primeMap.jpg" alt="">
+                <h4 class="adress_wrapper-title">Адреса: Шевченка 11
+                </h4>
+                <h4 class="adress_wrapper-title">
+                    Зупинка: Старий Суд
+                </h4>
+                <h4 class="adress_wrapper-title">
+                    Телeфон: +380988800908
+                </h4>
+                <p id="close">Натисніть щоб закрити</p>
+            </div>
+        </div>
+        <div class="hookas" id="hookas" onclick="closeHookasMenu()">
+            <div class="hookas_wrapper">
+                <img src="/img/hookasMenu.jpg" alt="">
+            </div>s
+        </div>
+    </section>
+    <section class="services">
+        <div class="container">
+            <div class="services_slider">
+                <div class="slider_line">
+                    <div class="services_slider-item">
+                        <video controls src="/video/PrimeTwo.mp4"></video>
+                    </div>
+                    <div class="services_slider-item">
+                        <video id="videoWithBurger" controls src="/video/burgerVideo.MOV"></video>
+                    </div>
+                    <div class="services_slider-item">
+                        <video id="vipPlusVideo" controls src="/video/vipPlusVideo.MOV"></video>
+                    </div>
+                </div>
+            </div>
+            <div class="button_wrapper">
+                <button class="slider_prev">Prev</button>
+                <button class="slider_next">Next</button>
+            </div>
+        </div>
+    </section>
+    <section class="delivery">
+        <h2 class="delivery_title">Доставка кальянiв Хмельницький</h2>
+        <h2 class="delivery_title">Доставка зон відпочинку Хмельницький</h2>
+        <div class="container">
+            <div class="delivery_slider">
+                <div class="delivery_slider-line">
+                    <div class="delivery_slider-line-item">
+                        <img src="/img/hookasDelivery.png" alt="">
+                        <div class="delivery_slider-line-item--texts">
+                            <ul>
+                                <li>Класичний - 300 грн <br> (Serberi , Daim Smoky Bull medium , Jibiar)</li>
+                                <li>Премiум - 350 грн (Cult , Milano)</li>
+                                <li>Хард - 400 грн(Tangiers , Darkside)</li>
+                                <li class="hookasTitle">Додаткова Чаша</li>
+                                <li>Класика - 180 грн</li>
+                                <li>Премiум - 210 грн</li>
+                                <li>Хард - 240 грн</li>
+                                <li class="hookasTitle">Кальян на фруктах:</li>
+                                <li>Грейпфрут - 100грн</li>
+                                <li>Ананас - 150 грн</li>
+                                <li>Апельсинова - 100 грн</li>
+                                <li class="hookasTitle">Добавки : <br> Фруктовый мiкс - 50 грн <br> Сiк 30 грн <br>Алкоголь (на вибiр)</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="delivery_slider-line-item">
+                        <img src="/img/cateringSliderOne.jpg" alt="">
+                        <div class="delivery_slider-line-item--texts">
+                            <h4 class="delivery_slider-line-item--texts__title">Lounge zone "Mini" - 1200 грн</h4>
+                            <ul>
+                                <li>Зонт 3х3 м</li>
+                                <li>4 посадочних місця <br> (пуфи/стільці)</li>
+                                <li>1 столик</li>
+                                <li>Ковролінове покриття</li>
+                                <li>Гірлянда</li>
+                                <li>Колонка JBL</li>
+                                <li>Вішалка для одягу</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="delivery_slider-line-item">
+                        <img src="/img/cateringSliderTwo.jpg" alt="">
+                        <div class="delivery_slider-line-item--texts">
+                            <h4 class="delivery_slider-line-item--texts__title">Lounge zone "Classic" - 2000 грн</h4>
+                            <ul>
+                                <li>Зонт 3х3 м</li>
+                                <li>8 посадочних місця (пуфи/стільці)</li>
+                                <li>2 столик</li>
+                                <li>Гірлянда</li>
+                                <li>Колонка JBL</li>
+                                <li>Ковролінове покриття</li>
+                                <li>Вішалка для одягу</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="delivery_slider-line-item">
+                        <img src="/img/cateringSliderFour.jpg" alt="">
+                        <div class="delivery_slider-line-item--texts">
+                            <h4 class="delivery_slider-line-item--texts__title">Lounge zone "XL " - 3700 грн</h4>
+                            <ul>
+                                <li>12 посадочних місць</li>
+                                <li>3 столика</li>
+                                <li>Гірлянда</li>
+                                <li>Колонка JBL</li>
+                                <li>Ковролінове покриття</li>
+                                <li>Гірлянда</li>
+                                <li>Колонка JBL</li>
+                                <li>Вішалка для одягу</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="delivery_slider-line-item">
+                        <img src="/img/cateringSliderThree.jpg" alt="">
+                        <div class="delivery_slider-line-item--texts">
+                            <h4 class="delivery_slider-line-item--texts__title">Lounge zone "VIP" - 3000 грн</h4>
+                            <ul>
+                                <li>Павільйон 3х4 м</li>
+                                <li>8 посадочних місця (пуфи/стільці)</li>
+                                <li>2 столик</li>
+                                <li>Гірлянда</li>
+                                <li>Колонка JBL</li>
+                                <li>Ковролінове покриття</li>
+                                <li>Вішалка для одягу</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="delivery_slider-line-item">
+                        <img src="/img/cateringSliderFive.jpg" alt="">
+                        <div class="delivery_slider-line-item--texts">
+                            <h4 class="delivery_slider-line-item--texts__title">Оренда шатра - 700 грн</h4>
+                            <p>3×3 м, захищає від дощу та сонця. <br> Стане чудовим доповненням до
+                                вашого <br> літнього відпочинку</p>
+                        </div>
+                    </div>
+                    <div class="delivery_slider-line-item">
+                        <img src="/img/cateringSliderSix.jpg" alt="">
+                        <div class="delivery_slider-line-item--texts">
+                            <h4 class="delivery_slider-line-item--texts__title">Оренда павільйону - 1400 грн</h4>
+                            <p>3х4м, бічні панелі з москітною сіткою, повністю закривається
+                                вологовідштовхуючою тканиною
+                                Монтаж, демонтаж та доставка в межах міста безкоштовна.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="button_wrapper">
+                    <button class="arrow-right">Попередня</button>
+                    <button class="arrow-left">Наступна</button>
+                </div>
+            </div>
+            <div class="delivery_info">
+                Для замовлення пишіть нам у direct instagram <a href="https://instagram.com/prime_hookah_khm?igshid=YmMyMTA2M2Y=">prime_hookah_khm</a> 
+                або телефонуйте <a class="tel" href="tel:+380670066067">+380670066067</a>
+            </div>
+        
+        </div>
+    </section>
+    <section class="lounge">
+        <h3 class="lounge_title">Lounge Zone</h3>
+        <div class="container">
+            <div class="lounge_item">
+                <img id="changingImg" src="/img/sliderLoungeFour.jpeg" alt="">
+            </div>
+            <div class="lounge_wrapper">
+                <button onclick="changeFirstImg()" id="firstButton"></button>
+                <button onclick="changeSecondImg()" id="secondButton"></button>
+                <button onclick="changeThirdImg()" id="thirdButton"></button>
+                <button onclick="changeForthImg()" id="forthButton"></button>
+            </div>
+        </div>
+    </section>
+    <section class="stock">
+        <h6 class="stock_title">Акції</h6>
+        <div class="container">
+            <div class="stock_wrapper">
+                <div class="stock_wrapper-item">
+                    <div class="stock_wrapper-item--img">
+                        <img id="repost" src="/img/repost.png" alt="">
+                    </div>
+                    <div class="stock_wrapper-item-title">
+                        <p>Якщо ви робите репост нашої публікації у себе в сторіс, ми даруємо вам знижку - 10% на ваше
+                            замовлення.</p>
+                    </div>
+                </div>
+                <div class="stock_wrapper-item">
+                    <div class="stock_wrapper-item--img">
+                        <img id="fruitHookah" src="/img/fruitHookah.jpg" alt="">
+                    </div>
+                    <div class="stock_wrapper-item-title">
+                        <p>Кожної середи фруктова чаша безкоштовна для кальяна преміум.</p>
+                    </div>
+                </div>
+                <div class="stock_wrapper-item">
+                    <div class="stock_wrapper-item--img">
+                        <img src="/img/20.png" alt="">
+                    </div>
+                    <div class="stock_wrapper-item-title">
+                        <p>Даруємо вам знижижку - 20% на ваш день народження.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="stock_subtitle">За деталями акцій звертайтесь до адміністратора Prime</p>
+        </div>
+    </section>
+    <section class="tariffs">
+        <h3 class="tariffs_title">Тарифи</h3>
+        <div class="container">
+            <div class="tariffs_wrapper">
+                <div class="tariffs_wrapper-lounge">
+                    <h4 class="tariffs_wrapper-lounge--title">Зал Lounge</h4>
+                    <div class="slider">
+                        <button onclick="changeLoungePhotoOne()" id="firstXbox" class="slider_button"></button>
+                        <button onclick="changeLoungePhotoTwo()" id="secondXbox" class="slider_button"></button>
+                        <div class="slider_item">
+                            <img id="xboxPhoto" src="/img/xbox.jpeg" alt="">
+                            <h5 class="title">Xbox One S</h5>
+                            <h6 class="subtitle">45 грн/год</h6>
+                            <div class="slick-dots"></div>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <button onclick="changeLoungePhotoThree()" class="slider_button"></button>
+                        <button onclick="changeLoungePhotoFour()" class="slider_button"></button>
+                        <div class="slider_item">
+                            <img id="sonyPhoto" src="/img/sonyPlayStationFour.jpeg" alt="">
+                            <h5 class="title">PS 4 PRO</h5>
+                            <h6 class="subtitle">45 грн/год</h6>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <button onclick="changeLoungePhotoFive()" class="slider_button"></button>
+                        <button onclick="changeLoungePhotoSix()" class="slider_button"></button>
+                        <div class="slider_item">
+                            <img id="vipRoom" src="/img/vipLounge.jpg" alt="">
+                            <h5 class="title">Vip Room PS 5</h5>
+                            <ul>
+                                <li>Вiд 2 оciб - 120 грн/год</li>
+                                <li>Вiд 2 до 4 оciб - 200грн/год</li>
+                                <li>Вiд 5 оciб - 250 грн/год</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tariffs_wrapper-computers">
+                    <h4 class="tariffs_wrapper-computers--title">Зал Gamimg</h4>
+                    <div class="slider">
+                        <button onclick="changeComputersPhotoOne()" class="slider_button"></button>
+                        <button onclick="changeComputersPhotoTwo()" class="slider_button"></button>
+                        <div class="slider_item">
+                            <img id="cyberRoom" src="/img/cyberRoom.jpeg" alt="">
+                            <h5 class="title">Cyber Room</h5>
+                            <h6 class="subtitle">40 грн/год</h6>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <button onclick="changeComputersPhotoThree()" class="slider_button"></button>
+                        <button onclick="changeComputersPhotoFour()" class="slider_button"></button>
+                        <div class="slider_item">
+                            <img id="pcVip" src="/img/pcVipOne.jpeg" alt="">
+                            <h5 class="title">Vip</h5>
+                            <h6 class="subtitle">45 грн/год</h6>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <button onclick="changeComputersPhotoFive()" class="slider_button"></button>
+                        <button onclick="changeComputersPhotoSix()" class="slider_button"></button>
+                        <div class="slider_item">
+                            <img id="vipPlus" src="/img/vipPlus.jpeg" alt="">
+                            <h5 class="title">Vip Plus</h5>
+                            <h6 class="subtitle">55 грн/год</h6>
+                            <ul>
+                                <li>Діагональ дисплея 27</li>
+                                <li>Частота оновлення 144 гц</li>
+                                <li>Ігрове крісло HATOR</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cinemaRoom">
+                <h3>Cinema Room</h3>
+                <div class="slider">
+                    <div class="slider_item">
+                        <img id="cinemaChangePath" src="/img/cinemaOne.jpeg" alt="">
+                        <video id="cinemaRoomVideo" src="/video/cinemaRoomMainVideo.MOV" controls></video>
+                    </div>
+                    <div class="buttons">
+                        <button onclick="changeсCinemaOne()" id="cinemaButtonOne"></button>
+                        <button onclick="changeсCinemaTwo()" id="cinemaButtonTwo"></button>
+                        <button onclick="changeсCinemaThree()" id="cinemaButtonThree"></button>
+                    </div>
+                </div>
+                <ul>
+                    <li>Вiд 1 до 2 оciб - 120 грн/год</li>
+                    <li>Вiд 3 до 4 оciб - 200грн/год</li>
+                    <li>Вiд 5 до 7 оciб - 250 грн/год</li>
+                    <li>Вiд 8 до 10 оciб - 300 грн/год</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+    <section class="about">
+        <div class="container">
+            <div class="about_wrapper">
+                <h4 class="about_wrapper-title">
+                    Про нас
+                </h4>
+                <div class="about_wrapper--content">
+                    <div class="about_wrapper--content__img">
+                        <img src="/img/logo.png" alt="">
+                    </div>
+                    <div class="about_wrapper--content__texts">
+                        <p>Prime Club - це молодіжний простір, в якому є місце для будь-якого віку</p>
+                        <ul>
+                            <li id="ulTitle">Перелік послуг:</li>
+                            <li>Лаунж зона</li>
+                            <li>Бар та кухня</li>
+                            <li>Консолі</li>
+                            <li>Коп'ютерні кімнати</li>
+                            <li>VIP room</li>
+                            <li>Cinema room</li>
+                        </ul>
+                        <p class="about_wrapper--content__texts-footer">
+                            У нас ви дізнаєтесь, що таке по-справжньому крутий відпочинок<br>
+
+                            Шевченка 11<br>
+                            Зупинка: <br> Старий Суд<br>
+                            Телофон: +380988800908<br>
+
+                            WELCOME
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_wrapper">
+                <div class="footer_wrapper-content">
+                    <h3>Бар Хмельницький</h3>
+                    <h3>Кальяни Хмельницький</h3>
+                    <h3>Кухня Хмельницький</h3>
+                    <h3>Клуб Хмельницький</h3>
+                    <h3>Бургери Хмельницький</h3>
+                </div>
+                <div class="footer_wrapper-content">
+                    <h3>Кальян на виїзд Хмельницький</h3>
+                    <h3>Смачні коктейлі Хмельницький</h3>
+                    <h3>Коктейлі Хмельницький</h3>
+                    <h3>Піца Хмельницький</h3>
+                    <h3>Клуб Хмельницький</h3>
+                </div>
+                <div class="footer_wrapper-content">
+                    <h3>Доставка павільйонів Хмельницький</h3>
+                    <h3>Cinema Room Хмельницький</h3>
+                    <h3>Консолі Хмельницький</h3>
+                    <h3>Компьютери Хмельницький</h3>
+                    
+                </div>
+                <div class="footer_wrapper-content">
+                    <h3>SonyPlayStation Хмельницький</h3>
+                    <h3>Xbox One S Хмельницький</h3>
+                    <h3>SonyPlayStation 5 Хмельницький</h3>
+                    <h3>Ps 5 Хмельницький</h3>
+                </div>
+                <div class="footer_wrapper-content">
+                    <h3>Ps 4 pro Хмельницький</h3>
+                    <h3>CS GO Хмельницький</h3>
+                    <h3>DOTA 2 Хмельницький</h3>
+                    <h3>Настiльнi Iгри Хмельницький</h3>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="/js/sliderVideo.js"></script>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
